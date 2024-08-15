@@ -1,0 +1,1124 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif,"Acme";
+    max-width: 1920px;
+}
+body {
+    background: #fff;
+}
+header { /* réglage de base header*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.logo img { /*Taille logo*/
+    width: 50px;
+}
+a img {
+    width: 20px;
+}
+.menu-logo {
+    display: flex;
+    align-items: center; /* centrer au milieu de son emplacement*/
+    justify-content: content;
+    z-index: 10;
+}
+.menu-logo ul {
+    display: flex;
+    list-style: none;
+    margin-left: 30px; /* décaler du logo*/
+}
+.menu-logo ul li a {
+    font-weight: bold;
+    margin-left: 20px; /* espace entre chaque selection*/
+    text-transform: uppercase; /* en maj uniquement*/
+    text-decoration: none; /*enlever les traits en dessous*/
+    font-size: 13px;
+    letter-spacing: 2px; /* espace entre chaque lettre, permet que se soit plus épuré*/
+    color: #000;
+    position: relative;
+    z-index: 10;
+}
+.menu-logo ul li a:after { /*création barre rouge apres avoir cliquer sur une catégorie*/
+    content: "";
+    position: absolute;
+    left: -15px;
+    bottom: 20px;
+    background-color: #48cae4;
+    height: 2px;
+    width: 100%;
+    transition: 0.5s;
+    opacity: 0;
+}
+.menu-logo ul li a:hover:after { /*faire apparaitre barre rouge au passage de la souris*/
+    left: 0;
+    opacity: 1;
+}
+
+/*SECTIONS PRESENTATION*/
+section {
+    display: flex;
+    align-items: center;
+    width: 94%;
+    margin: 30px 3%;
+}
+section div { /*texte de la div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__1 { 
+    height: 800px;
+}
+
+.section__1 .div1 img { 
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        position: relative;
+        top: 140px;
+        left: 200px;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    }
+
+.section__1 .div2 h1 {
+    color: #000;
+    position: relative;
+    top: 90px;
+    right: 40px;
+}
+
+.section__1 .div2 p {
+    text-align: justify;
+    position: relative;
+    top: 110px;
+    left: 100px;
+    z-index: 1;
+    font-size: 25px;
+    letter-spacing: 1px;
+    max-width: 600px;
+}
+
+.section__1 .div2 img {
+    width: 1500px;
+        height: 1500px;
+        position: absolute;
+        top: -200px;
+        left: 600px;
+        max-width: 700px;
+}
+
+
+section .div1 , section .div2 {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+
+.section__1 h1 { /*Titre de chaque cadre*/
+    margin-top: 15px;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: "Acme";
+    color: #fff;
+}
+
+
+.section__2 { /*arrière plan de la section2*/
+    height: 800px;
+}
+.section__2 .div1 h1{
+    
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    font-family: "Acme";
+}
+
+.section__2 .div2 img {
+    width: 60%;
+        height: 60%;
+        object-fit: cover;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        position: relative;
+        top: 140px;
+        left: 200px;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.section__2 p{
+    position: relative;
+    top: 40px;
+    text-align: justify;
+    font-size: 25px;
+    color: #fff;
+    
+}
+
+.skewed {
+  position: absolute;
+  top: 1000px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2c3e50;
+  z-index: -1;
+  transform: skewY(2deg);
+  transform-origin: top right;
+}
+
+.skewed2 {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: #48cae4;
+  z-index: -1;
+  
+  transform-origin: top right;
+}
+/*SECTIONS PRESENTATION*/
+
+
+/*SECTIONS VOYAGES*/
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 10fr); /* Crée une grille de 10 colonnes */
+    width: 100%;
+    height: 100vh; /*Hauteur de la fenêtre */
+  }
+  
+  .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+  }
+  
+  .grid-item p {
+    width: 750px;
+  }
+  
+  .item1 {
+    grid-column: 1 / span 1; /* Prend les colonnes de 1 à 5 */
+    background-image: url('images/grece.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 800px;
+  }
+  
+  .item2 {
+    grid-column: 2 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-color: #48cae4; /* Couleur de fond pour l'élément 2 */
+    width: 100%;              /* Prend la moitié de la largeur du conteneur */
+      padding: 20px;           /* Ajoute du padding autour du contenu */
+          display: flex;
+          flex-direction: column;  /* Dispose les enfants en colonne */
+          justify-content: center; /* Centre verticalement les enfants */
+          align-items: center;    /* Centre horizontalement les enfants */
+          color: black;
+          
+  }
+  
+  .item2 .content p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    margin-top: 50px;
+    text-align: justify;
+    max-width: 800px;
+  }
+  
+  .item3 {
+    grid-column: 1 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-color: #333333; /* Couleur de fond pour l'élément 2 */
+    width: 100%;              /* Prend la moitié de la largeur du conteneur */
+      padding: 20px;           /* Ajoute du padding autour du contenu */
+          display: flex;
+          flex-direction: column;  /* Dispose les enfants en colonne */
+          justify-content: center; /* Centre verticalement les enfants */
+          align-items: center;    /* Centre horizontalement les enfants */
+          color: white;
+  }
+  
+  .item4 {
+    grid-column: 2 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-image: url('images/tunisie.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 1000px;
+  }
+  
+  .item5 {
+    grid-column: 1 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-image: url('images/croatie.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 1000px;
+  }
+  
+  .item6 {
+    grid-column: 2 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-color: #48cae4; /* Couleur de fond pour l'élément 2 */
+    width: 100%;              /* Prend la moitié de la largeur du conteneur */
+      padding: 20px;           /* Ajoute du padding autour du contenu */
+          display: flex;
+          flex-direction: column;  /* Dispose les enfants en colonne */
+          justify-content: center; /* Centre verticalement les enfants */
+          align-items: center;    /* Centre horizontalement les enfants */
+          color: black;
+          
+  }
+  
+  .item7 {
+    grid-column: 1 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-color: #333333; /* Couleur de fond pour l'élément 2 */
+    width: 100%;              /* Prend la moitié de la largeur du conteneur */
+      padding: 20px;           /* Ajoute du padding autour du contenu */
+          display: flex;
+          flex-direction: column;  /* Dispose les enfants en colonne */
+          justify-content: center; /* Centre verticalement les enfants */
+          align-items: center;    /* Centre horizontalement les enfants */
+          color: white;
+          
+  }
+  
+  .item8 {
+    grid-column: 2 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-image: url('images/sardaigne.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 800px;
+  }
+  
+  .item9 {
+    grid-column: 1 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-image: url('images/tchequie.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 1000px;
+  }
+  
+  .item10 {
+    grid-column: 2 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-color: #48cae4; /* Couleur de fond pour l'élément 2 */
+    width: 100%;              /* Prend la moitié de la largeur du conteneur */
+      padding: 20px;           /* Ajoute du padding autour du contenu */
+          display: flex;
+          flex-direction: column;  /* Dispose les enfants en colonne */
+          justify-content: center; /* Centre verticalement les enfants */
+          align-items: center;    /* Centre horizontalement les enfants */
+          color: black;
+          
+  }
+  
+  .item11 {
+    grid-column: 1 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-color: #333333; /* Couleur de fond pour l'élément 2 */
+    width: 100%;              /* Prend la moitié de la largeur du conteneur */
+      padding: 20px;           /* Ajoute du padding autour du contenu */
+          display: flex;
+          flex-direction: column;  /* Dispose les enfants en colonne */
+          justify-content: center; /* Centre verticalement les enfants */
+          align-items: center;    /* Centre horizontalement les enfants */
+          color: white;
+          height: 130vh;
+          
+  }
+  
+  .item12 {
+    grid-column: 2 / span 1; /* Prend les colonnes de 6 à 10 */
+    background-image: url('images/cracovie.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 130vh;
+              
+  }
+  
+    /*SECTIONS VOYAGES*/
+
+    /*VIDEO PRESENTATION SITE*/
+    .bloc {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .bloc video {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        z-index: -100;
+        transform: translate(-50%, -50%);
+        
+    }
+    /*VIDEO PRESENTATION SITE*/
+
+
+    /*TEST BOUTON PAGE PRINCIPALE*/
+    .button-1
+{
+    position: absolute;
+    top: 350px;
+    left: 900px;
+    display: block; /* pour que ça fonctionne avec width et height */
+    width: 160px; /* Taille du carré*/
+    height:50px; /* hauteur du carré*/
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px; /* Taille texte */
+    font-family: 'Acme';
+    text-decoration: none;
+    margin: 0 auto; /* 0 pour en haut en bas et auto pour droite gauche le bouton*/
+    line-height: 50px; /* Hauteur de ligne du texte dans le bouton (au milieu en bas en haut)*/
+    text-align: center; /* Centrer gauche droite*/
+    border-radius: 60px; /* Pour arrondir les angles */
+    border: 2px solid #fff;
+    box-shadow: 10px 10px 10px black;
+}
+
+.button-1:hover /* pour passage de la souris sur bouton*/
+{
+    background: #E4B363;
+}
+
+/*TEST BOUTON PAGE PRINCIPALE*/
+
+/*FOOTER*/
+.footer_end_text {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #999;
+    text-align: center;
+    margin-top: 25px;
+    padding-bottom: 30px;
+    position: relative;
+    top: 100px;
+}
+
+/*FOOTER*/
+
+/*IDEES DESTINATIONS*/
+.wrapper {
+    display: flex;
+    width: 70%;
+    justify-content: baseline;
+    
+}
+
+.cartes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    padding-left: 100px;
+    padding-right: 10px;
+}
+.card1 {
+    width: 300px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 10px;
+}
+.card1:hover{
+    transform: translateY(20px);
+}
+
+.card1:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.card1:hover:before{
+    opacity: 1;
+}
+.card1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card1 .info {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.card1:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.card1 .info h1{
+    margin: 0;
+    font-size: 40px;
+    padding-left: 0px;
+    position: absolute;
+    top: 100px;
+    text-transform: uppercase;
+}
+
+.card1 .info .btn{
+    position: absolute;
+    top: 200px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.card1 .info .btn:hover{
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+/*IDEES DESTINATIONS*/
+
+/*PAGE ALLEMAGNE*/
+
+.title {
+    
+    height: 150px;
+    width: 100%;
+    padding: 0;
+    margin: 0;                                      
+}
+
+.title .div1 h1{
+    position: relative;
+    font-family: 'Grandstander';
+    font-size: 100px;
+    top: 210px;
+    left: 70%;
+}
+
+
+.etapes_1{
+    position: relative;
+    width: 90%;
+    height: 700px;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 0;
+    
+}
+.etapes_1 .div1 img{
+    position: relative;
+    top: -80px;
+    left: 600px;
+    width: 100%;
+    height: 800px;
+    z-index: 1;
+}
+
+.etapes_1 h1 {
+    position: absolute;
+    left: 940px;
+    top: 260px;
+    z-index: 2;
+    font-size: 40px;
+    
+    
+}
+.etapes_1 .div1 p {
+    position: absolute;
+    z-index: 2;
+    bottom: 90px;
+    left: 830px;
+    max-width: 400px; /* taille maximale en pixels */
+  overflow: hidden;
+  word-break:break-word;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.etapes_1 .div2 img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: relative;
+    top: 140px;
+    left: 400px;
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.etapes_2 .div1 h1 {
+    position: absolute;
+    left: 160px;
+    top: 520px;
+    z-index: 2;
+    font-size: 40px;
+}
+
+.etapes_2 .div1 ul {
+    position: absolute;
+    z-index: 2;
+    left: 130px;
+    top: 585px;
+    padding: 0px;
+    max-width: 500px; 
+    font-size: 20px;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.etapes_2 .div1 img {
+    position: absolute;
+    left: 0px;
+    top: 330px;
+    width: 530px;
+    height: 530px;
+    z-index: 1;
+}
+.etapes_2 .div2 img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 66% 34% 69% 31% / 53% 52% 48% 47%  ;
+    position: absolute;
+    left: 370px;
+    top: 480px;
+    z-index: 0;
+    
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+.container .step1 h2 {
+    position: absolute;
+    text-transform: uppercase;
+    top: 1050px;
+    left: 130px;
+    font-size: 20px;
+    max-width: 350px;
+}
+.container .step1 h3{
+    position: absolute;
+    top: 1070px;
+    left: 130px;
+    margin-bottom: 25px;
+}
+.container .step1 p{
+    position: absolute;
+    top: 1110px;
+    left: 130px;
+    max-width: 350px; 
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.container .step2 h2 {
+    position: absolute;
+    text-transform: uppercase;
+    top: 1050px;
+    left: 730px;
+    font-size: 20px;
+    max-width: 350px;
+}
+.container .step2 h3{
+    position: absolute;
+    top: 1070px;
+    left: 730px;
+    margin-bottom: 25px;
+}
+.container .step2 p{
+    position: absolute;
+    top: 1110px;
+    left: 730px;
+    max-width: 350px; 
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+.container .step3 h2 {
+    position: absolute;
+    text-transform: uppercase;
+    top: 1050px;
+    left: 1330px;
+    font-size: 20px;
+    max-width: 350px;
+}
+.container .step3 h3{
+    position: absolute;
+    top: 1070px;
+    left: 1330px;
+    margin-bottom: 25px;
+}
+.container .step3 p{
+    position: absolute;
+    top: 1110px;
+    left: 1330px;
+    max-width: 350px; 
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.container .step4 h2 {
+    position: absolute;
+    text-transform: uppercase;
+    top: 1700px;
+    left: 130px;
+    font-size: 20px;
+    max-width: 350px;
+}
+.container .step4 h3{
+    position: absolute;
+    top: 1720px;
+    left: 130px;
+    margin-bottom: 25px;
+}
+.container .step4 p{
+    position: absolute;
+    top: 1750px;
+    left: 130px;
+    max-width: 350px; 
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.container .step5 h2 {
+    position: absolute;
+    text-transform: uppercase;
+    top: 1700px;
+    left: 730px;
+    font-size: 20px;
+    max-width: 350px;
+}
+.container .step5 h3{
+    position: absolute;
+    top: 1720px;
+    left: 730px;
+    margin-bottom: 25px;
+}
+.container .step5 p{
+    position: absolute;
+    top: 1750px;
+    left: 730px;
+    max-width: 350px; 
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.container .step6 h2 {
+    position: absolute;
+    text-transform: uppercase;
+    top: 1700px;
+    left: 1330px;
+    font-size: 20px;
+    max-width: 350px;
+}
+.container .step6 h3{
+    position: absolute;
+    top: 1720px;
+    left: 1330px;
+    margin-bottom: 25px;
+}
+.container .step6 p{
+    position: absolute;
+    top: 1750px;
+    left: 1330px;
+    max-width: 350px; 
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.illustration .illustration1 img {
+    position : absolute;
+    width: 516px;
+    height: 280px;
+    object-fit: cover;
+    top: 1370px;
+    left: 130px;
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.illustration .illustration2 img {
+    position : absolute;
+    width: 516px;
+    height: 280px;
+    object-fit: cover;
+    top: 1370px;
+    left: 646px;
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.illustration .illustration3 img {
+    position : absolute;
+    width: 516px;
+    height: 280px;
+    object-fit: cover;
+    top: 1370px;
+    left: 1162px;
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.illustration .waves img {
+    width: 1920px;
+    height: 200px;
+    position: absolute;
+    top: 80px;
+}
+
+.illustration .cercle img {
+    width: 1920px;
+    height: 200px;
+    position: absolute;
+    top: 2000px;
+    rotate: 180deg;
+    
+}
+/*PAGE ALLEMAGNE*/
+
+/*PAGE ANGLETERRE*/
+.etapes_1_ang{
+    position: relative;
+    width: 90%;
+    height: 700px;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 0;
+    
+}
+.etapes_1_ang .div1 img{
+    position: relative;
+    top: -220px;
+    left: 610px;
+    width: 900px;
+    height: 900px;
+    z-index: 1;
+}
+
+.etapes_1_ang h1 {
+    position: absolute;
+    left: 980px;
+    top: 220px;
+    z-index: 2;
+    font-size: 40px;
+    
+    
+}
+.etapes_1_ang .div1 p {
+    position: absolute;
+    z-index: 2;
+    bottom: 200px;
+    left: 900px;
+    max-width: 350px; /* taille maximale en pixels */
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 18px;
+    text-align: justify;
+
+}
+
+.etapes_1_ang .div2 img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: relative;
+    top: 140px;
+    left: 400px;
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.etapes_2_ang .div1 h1 {
+    position: absolute;
+    left: 140px;
+    top: 490px;
+    z-index: 2;
+    font-size: 40px;
+}
+
+.etapes_2_ang .div1 ul {
+    position: absolute;
+    z-index: 2;
+    left: 130px;
+    top: 585px;
+    padding: 0px;
+    max-width: 500px; 
+    font-size: 20px;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.etapes_2_ang .div1 img {
+    position: absolute;
+    left: -130px;
+    top: 140px;
+    width: 750px;
+    height: 750px;
+    z-index: 1;
+}
+.etapes_2_ang .div2 img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 66% 34% 69% 31% / 53% 52% 48% 47%  ;
+    position: absolute;
+    left: 370px;
+    top: 480px;
+    z-index: 0;
+    
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.illustration .waves img {
+    width: 1920px;
+    height: 200px;
+    position: absolute;
+    top: 80px;
+}
+
+.illustration .cercle img {
+    width: 1920px;
+    height: 200px;
+    position: absolute;
+    top: 2000px;
+    rotate: 180deg;
+    
+}
+/*PAGE ANGLETERRE*/
+
+/*PAGE GALLE*/
+.etapes_1_all{
+    position: relative;
+    width: 90%;
+    height: 700px;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 0;
+    
+}
+.etapes_1_all .div1 img{
+    position: relative;
+    top: -480px;
+    left: 340px;
+    width: 1400px;
+    height: 1400px;
+    z-index: 1;
+}
+
+.etapes_1_all h1 {
+    position: absolute;
+    left: 960px;
+    top: 220px;
+    z-index: 2;
+    font-size: 40px;
+    
+    
+}
+.etapes_1_all .div1 p {
+    position: absolute;
+    z-index: 2;
+    bottom: 200px;
+    left: 900px;
+    max-width: 350px; /* taille maximale en pixels */
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+.etapes_1_all .div2 img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: relative;
+    top: 140px;
+    left: 400px;
+    z-index: 0;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.etapes_2_all .div1 h1 {
+    position: absolute;
+    left: 135px;
+    top: 490px;
+    z-index: 2;
+    font-size: 40px;
+}
+
+.etapes_2_all .div1 ul {
+    position: absolute;
+    z-index: 2;
+    left: 150px;
+    top: 585px;
+    padding: 0px;
+    max-width: 500px; 
+    font-size: 20px;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.etapes_2_all .div1 img {
+    position: absolute;
+    left: -300px;
+    top: -40px;
+    width: 1050px;
+    height: 1050px;
+    z-index: 1;
+}
+.etapes_2_all .div2 img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 66% 34% 69% 31% / 53% 52% 48% 47%  ;
+    position: absolute;
+    left: 370px;
+    top: 480px;
+    z-index: 0;
+    
+    
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.illustration .waves img {
+    width: 1920px;
+    height: 200px;
+    position: absolute;
+    top: 80px;
+}
+
+.illustration .cercle img {
+    width: 1920px;
+    height: 200px;
+    position: relative;
+    top: 1080px;
+    rotate: 180deg;
+    
+}
+/*PAGE GALLE*/
+
+/*PAGE AUTRICHE*/
+.title_aut {
+    
+    height: 150px;
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+    text-transform: uppercase;                                          
+}
+
+.title_aut .div1 h1{
+    position: relative;
+    font-family: 'Grandstander';
+    font-size: 100px;
+    top: 210px;
+    left: 85%;
+}
+
+.etapes_1_all .p_autriche p {
+    position: absolute;
+    z-index: 2;
+    bottom: 150px;
+    left: 900px;
+    max-width: 350px; /* taille maximale en pixels */
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 20px;
+    text-align: justify;
+
+}
+/*PAGE AUTRICHE*/
+
+/*PAGE BALEARES*/
+/*PAGE BALEARES*/
+
+/*PAGE BELGIQUE*/
+/*PAGE BELGIQUE*/
+
+/*PAGE BULGARIE*/
+.etapes_1_all .p_bulgarie p {
+    position: absolute;
+    z-index: 2;
+    bottom: 200px;
+    left: 900px;
+    max-width: 350px; /* taille maximale en pixels */
+    overflow: hidden;
+    word-break:break-word;
+    font-size: 20px;
+    text-align: justify;
+
+}
+/*PAGE BULGARIE*/
